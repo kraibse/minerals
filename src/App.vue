@@ -1,11 +1,16 @@
 <script setup lang="ts">
 // This starter template is using Vue 3 <script setup> SFCs
 // Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
-import Greet from "./components/Greet.vue";
 import FolderSidebar from "./components/particles/FolderSidebar.vue";
+import ContainerArea from "./components/organisms/ContainerArea.vue";
+
 </script>
 
 <template>
+  <div class="flex flex-row">
+    <FolderSidebar />
+    <ContainerArea />
+  </div>
 
 </template>
 
@@ -24,6 +29,11 @@ import FolderSidebar from "./components/particles/FolderSidebar.vue";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0 !important;
+  padding: 0;
 }
 
 @media (prefers-color-scheme: dark) {
