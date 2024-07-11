@@ -3,8 +3,68 @@
 @tailwind utilities;
 
 
+root {
+    --primary-color: #4285F4;
+    --primary-color-mute: #4286f4;
+    --secondary-color: #23272e;
+
+    --background-color: #23272e;
+    --background-secondary-color: #24272e;
+    /* #2c2f36; */
+    --background-highlighted-color: #2d313b;
+}
+
+
+@layer utilities {
+    .scrollbar::-webkit-scrollbar {
+        width: 8px;
+        height: 20px;
+    }
+
+    .scrollbar::-webkit-scrollbar-track {
+        border-radius: 100vh;
+        background: var(--background-color);
+    }
+
+    .scrollbar::-webkit-scrollbar-thumb {
+        background: #333;
+        border-radius: 100vh;
+        /* border: 3px solid #f6f7ed; */
+    }
+
+    .scrollbar::-webkit-scrollbar-thumb:hover {
+        background: #555;
+    }
+}
+
+
+
 body {
     background-color: #23272e;
     color: #f8f8f2;
     overflow: hidden;
+    /* background-color: #000000;
+    color: #FFFFFF; */
+}
+
+a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #4285F4;
+}
+
+.disabled {
+    color: #808080;
+}
+
+.folder {
+    color: #9097A2;
+}
+
+.selected {
+    background-color: #29ABCA;
+    color: #FFFFFF;
 }

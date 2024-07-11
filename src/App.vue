@@ -7,6 +7,10 @@ import ContainerArea from "./components/organisms/ContainerArea.vue";
 </script>
 
 <template>
+  <div class="w-full h-8 bg-[#202020] flex justify-center items-center">
+    <input type="text" placeholder="Search ..." class="input rounded-xl h-6 px-4 py-3 bg-gray-600" />
+  </div>
+
   <div class="flex flex-row">
     <FolderSidebar />
     <ContainerArea />

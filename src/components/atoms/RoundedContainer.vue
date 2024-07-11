@@ -1,5 +1,5 @@
 <template>
-    <div id="rounded-container" class="p-1 rounded-lg bg-gray-600 flex align-items-center">
+    <div id="rounded-container" class="p-1 rounded-lg bg-gray-600 flex justify-center items-center min-w-8 min-h-8">
         <slot></slot>
     </div>
 </template>
