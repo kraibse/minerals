@@ -3,12 +3,13 @@
 // Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
 import FolderSidebar from "./components/particles/FolderSidebar.vue";
 import ContainerArea from "./components/organisms/ContainerArea.vue";
+import SearchBar from './components/atoms/SearchBar.vue'
 
 </script>
 
 <template>
-  <div class="w-full h-8 bg-[#202020] flex justify-center items-center">
-    <input type="text" placeholder="Search ..." class="input rounded-xl h-6 px-4 py-3 bg-gray-600" />
+  <div id="searchbar" class="w-full h-8 bg-[#202020] flex justify-center items-center">
+    <SearchBar />
   </div>
 
   <div class="flex flex-row">

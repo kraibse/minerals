@@ -7,7 +7,7 @@ console.log("Found props", props);
 </script>
 
 <template>
-    <li class="flex items-center space-x-2 px-2 py-1 rounded-md hover:bg-[#2c313a]">
+    <li class="flex items-center space-x-2 py-1 rounded-md hover:bg-[#2c313a]">
         <FontAwesomeIcon :icon="['fa', 'fa-folder']"></FontAwesomeIcon>
         <span class="text-gray-300">{{ props.title }}</span>
     </li>
