@@ -3,13 +3,14 @@
 @tailwind utilities;
 
 
-root {
+:root {
     --primary-color: #4285F4;
     --primary-color-mute: #4286f4;
     --secondary-color: #23272e;
 
     --background-color: #23272e;
     --background-secondary-color: #24272e;
+    --background-alternate: #1e2227;
     /* #2c2f36; */
     --background-highlighted-color: #2d313b;
 }
@@ -67,4 +68,11 @@ a:hover {
 .selected {
     background-color: #29ABCA;
     color: #FFFFFF;
+}
+
+hr {
+    border-color: #808080;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
 }

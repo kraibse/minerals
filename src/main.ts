@@ -4,8 +4,8 @@ import App from "./App.vue";
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
-import { faFolder, faFolderOpen, faFolderPlus, faFolderMinus, faFolderTree } from '@fortawesome/free-solid-svg-icons'
+import { faPlus, faFolder, faFolderOpen, faFolderPlus, faFolderMinus, faFolderTree, faHouse, faChevronRight, faChevronDown } from '@fortawesome/free-solid-svg-icons'
 
-library.add(faFolder, faFolderOpen, faFolderPlus, faFolderMinus, faFolderTree)
+library.add(faPlus, faFolder, faFolderOpen, faFolderPlus, faFolderMinus, faFolderTree, faHouse, faChevronRight, faChevronDown)
 
 createApp(App).mount("#app");

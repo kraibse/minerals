@@ -1,20 +1,30 @@
 <script setup lang="ts">
 // This starter template is using Vue 3 <script setup> SFCs
 // Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
-import FolderSidebar from "./components/particles/FolderSidebar.vue";
-import ContainerArea from "./components/organisms/ContainerArea.vue";
-import SearchBar from './components/atoms/SearchBar.vue'
+import FolderSidebar from "./components/organisms/FolderSidebar.vue";
+import MainArea from "./components/organisms/MainArea.vue";
+import RightSidebar from "./components/organisms/RightSidebar.vue";
+
+import IconButton from "./components/atoms/IconButton.vue";
+
 
 </script>
 
 <template>
-  <div id="searchbar" class="w-full h-8 bg-[#202020] flex justify-center items-center">
-    <SearchBar />
-  </div>
+  <div class="flex flex-col">
+    <!-- <div class="h-fit flex flex-row">
+      <IconButton></IconButton>
+      <IconButton>Tab 1</IconButton>
+      <IconButton>New File</IconButton>
+      <IconButton>New File</IconButton>
+      <IconButton>New File</IconButton>
+    </div> -->
 
-  <div class="flex flex-row">
-    <FolderSidebar />
-    <ContainerArea />
+    <div class="flex flex-row">
+      <FolderSidebar />
+      <MainArea />
+      <!-- <RightSidebar /> -->
+    </div>
   </div>
 
 </template>
