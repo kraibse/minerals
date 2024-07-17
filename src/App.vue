@@ -11,19 +11,15 @@ import IconButton from "./components/atoms/IconButton.vue";
 </script>
 
 <template>
-  <div class="flex flex-col">
-    <!-- <div class="h-fit flex flex-row">
-      <IconButton></IconButton>
-      <IconButton>Tab 1</IconButton>
-      <IconButton>New File</IconButton>
-      <IconButton>New File</IconButton>
-      <IconButton>New File</IconButton>
-    </div> -->
-
+  <div class="flex flex-col h-full">
     <div class="flex flex-row">
       <FolderSidebar />
       <MainArea />
       <!-- <RightSidebar /> -->
+    </div>
+
+    <div class="h-6 w-full flex text-sm text-gray-300 bg-alternate">
+      <div>Copyright © 2022 - 2023. All rights reserved.</div>
     </div>
   </div>
 
