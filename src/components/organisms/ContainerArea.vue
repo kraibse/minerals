@@ -9,7 +9,7 @@ const props = defineProps(["hasOptionBar"]);
 </script>
 
 <template>
-    <div id="container-area" class="w-full h-full bg-red-500 flex flex-wrap align-items-stretch p-4 h-fit">
+    <div id="container-area" class="w-full h-full bg-red-500 flex flex-wrap align-items-stretch p-4">
         <FolderGridItem v-for="i in 20" :key="i"></FolderGridItem>
     </div>
 </template>

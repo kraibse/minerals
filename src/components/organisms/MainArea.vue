@@ -7,11 +7,10 @@ import ToolTopBar from './ToolTopBar.vue';
 </script>
 
 <template>
-    <div class="flex flex-col w-full h-full">
-
+    <div class="relative flex flex-col w-full h-full">
         <ToolTopBar></ToolTopBar>
-        <ContainerArea></ContainerArea>
 
+        <ContainerArea></ContainerArea>
     </div>
 
 </template>
