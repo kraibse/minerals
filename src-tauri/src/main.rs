@@ -8,6 +8,7 @@ use std::path::Path;
 struct FileItem {
     name: String,
     is_dir: bool,
+    icon: String,
     // Add other file attributes as needed
 }
 
@@ -35,12 +36,26 @@ fn read_directory(path: String) -> Result<Vec<FileItem>, String> {
                 .filter_map(|entry| {
                     entry.ok().map(|e| {
                         let file_type = e.file_type().ok()?;
-                        let name = e.file_name().into_string().ok()?;
-                        Some(FileItem {
-                            name,
-                            is_dir: file_type.is_dir(),
-                            // Add other file attributes here
-                        })
+
+                        if file_type.is_dir() || file_type.is_file() {
+                            let icon: &str = if file_type.is_dir() {
+                                "folder"
+                            } else if file_type.is_file() {
+                                "file"
+                            } else {
+                                "unidentified"
+                            };
+
+                            let name = e.file_name().into_string().ok()?;
+                            Some(FileItem {
+                                name,
+                                is_dir: file_type.is_dir(),
+                                icon: icon.to_string(),
+                                // Add other file attributes here
+                            })
+                        } else {
+                            None
+                        }
                     })
                 })
                 .flatten()

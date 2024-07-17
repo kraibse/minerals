@@ -12,8 +12,8 @@ const activeTab = ref(1);
 const drives = ref({
     "OS": "C:",
     "Games": "D:",
-    "Music": "E:",
-    "Pictures": "F:",
+    // "Music": "E:",
+    // "Pictures": "F:",
 });
 
 </script>
@@ -22,10 +22,10 @@ const drives = ref({
 <template>
     <div class="ring-slate-900/5 flex flex-row">
 
-        <div class="h-16 bg-[#23272e] border-white flex flex-col justify-content-center gap-y-2">
+        <div class="h-16 bg-[#23272e] border-white flex flex-col justify-content-center gap-y-1">
             <FontAwesomeIcon :icon="(i == 1) ? 'fa-home' : 'fa-folder'"
-                class="size-6 px-3 pb-1.5 text-gray-600 hover:text-blue-200 cursor-pointer rounded-l-xl" v-for="i in 5"
-                :class="{ 'pt-3': i === 1, 'pb-3': i === 5, 'active': activeTab === i }" :key="i" />
+                class="size-6 p-2 text-gray-600 hover:text-blue-200 cursor-pointer rounded-l-xl" v-for="i in 5"
+                :class="{ 'active': activeTab === i }" :key="i" @click="activeTab = i" />
         </div>
         <div id="folder-sidebar"
             class="ring-slate-900/5 border-l-4 border-active bg-alternate flex flex-col overflow-hidden px-2 pb-3">
@@ -49,8 +49,8 @@ const drives = ref({
                 <hr class="my-4">
 
                 <div id="drives">
-                    <FolderPin v-for="drive in Object.keys(drives)" :key="drive" :title="drive" :path="drives[drive]"
-                        type="folder"></FolderPin>
+                    <FolderPin v-for="drive in Object.keys(drives)" :key="drive" :title="drive + ` (${drives[drive]})`"
+                        :path="drives[drive] + '\\'" type="folder"></FolderPin>
                 </div>
             </div>
 
@@ -69,6 +69,6 @@ const drives = ref({
 .active {
     background-color: var(--primary-color);
     color: white;
-    padding-bottom: 0.75rem;
+    /* padding-bottom: 0.75rem; */
 }
 </style>
